@@ -3,7 +3,7 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -36,6 +36,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=raymond-allen-sonarsource_maven_7eb2c75a-7de5-4b33-b909-e650b7dfcc68 -Dsonar.projectName='maven'
-
-        
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=raymond-allen-sonarsource_C-Source-sonar-scanning-examples-master-sonarqube-scanner-maven_61a25d10-5132-4f66-a710-1b22e33af6e8 -Dsonar.projectName='C-Source-sonar-scanning-examples-master-sonarqube-scanner-maven'
